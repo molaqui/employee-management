@@ -1,0 +1,18 @@
+<div class="container mx-auto py-8">
+  <h2 class="text-2xl font-bold mb-4">Employee Details</h2>
+  <div *ngIf="employee" class="p-6 border border-gray-300 rounded-lg">
+    <p class="mb-2"><strong>ID:</strong> {{ employee?.id }}</p>
+    <p class="mb-2"><strong>Name:</strong> {{ employee?.firstName }} {{ employee?.lastName }}</p>
+    <p class="mb-2"><strong>Email:</strong> {{ employee?.email }}</p>
+    <p class="mb-2"><strong>Phone Number:</strong> {{ employee?.phoneNumber }}</p>
+    <p class="mb-2"><strong>Position:</strong> {{ employee?.position }}</p>
+    <p class="mb-2"><strong>Department:</strong> {{ employee?.department }}</p>
+    <p class="mb-2"><strong>Date of Hire:</strong> {{ employee?.dateOfHire }}</p>
+    <button
+      class="bg-blue-500 text-white px-4 py-2 rounded"
+      (click)="goBack()"
+    >
+      Back
+    </button>
+  </div>
+</div>
